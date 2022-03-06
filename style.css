@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Source Code Pro', monospace;
+  background-color: #1f1d1d;
+} 
+.container {
+  box-sizing: border-box;
+  min-height: 100vh;
+  max-width: 1500px;
+  margin: 0 auto;
+  color: #00ff00;
+  font-size: 13px;
+  text-shadow: 0 0 1.75px #00ff00;
+  padding: 1em 2em;
+} 
+.code {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+}
