@@ -21,5 +21,4 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-Beware I am unable to get my virtual keyboard to show up on my iPhone. Currently working on fixing the bug.
 * Project inspired by the original <a href="https://hackertyper.net/">Hacker Typer</a>.
