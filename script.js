@@ -1,34 +1,27 @@
+import {kernel} from "./kernel.js"
+
 const codeContainer = document.querySelector(".container")
 const code = document.querySelector(".code")
-let sourceCode = ""
+let sourceCode = kernel
 const charStep = 3 //add n characters on every keystroke
 let endIndex = 0 
 
-//gets the text from a local file
-fetch("/kernel.txt")
-        .then(res => res)
-        .then(data => data.text())
-        .then(text => init(text))
-
-// main app
-function init(text) {
-    sourceCode = text
-            document.addEventListener("keydown", handleKey)
-            function handleKey(e) {
-                if (endIndex <= 0) {
-                    endIndex = 0
-                }
-                if (e.key === "Backspace") {  
-                    endIndex -= charStep
-                    code.innerHTML = sourceCode.substring(0, endIndex)
-                } else {
-                    endIndex += charStep
-                    code.innerHTML = sourceCode.substring(0, endIndex)
-                    if (code.offsetHeight = codeContainer.offsetHeight) {
-                        window.scrollTo(0, codeContainer.offsetHeight)
-                    }
-                }
-            }
+//main app logic
+document.addEventListener("keydown", handleKey)
+function handleKey(e) {
+    if (endIndex <= 0) {
+        endIndex = 0
+    }
+    if (e.key === "Backspace") {  
+        endIndex -= charStep
+        code.innerHTML = sourceCode.substring(0, endIndex)
+    } else {
+        endIndex += charStep
+        code.innerHTML = sourceCode.substring(0, endIndex)
+        if (code.offsetHeight === codeContainer.offsetHeight) {
+            window.scrollTo(0, codeContainer.offsetHeight)
+        }
+    }
 }
 
 // blinking cursor effect 
