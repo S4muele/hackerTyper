@@ -10,10 +10,6 @@
   </p>
 </div>
 
-## Know issues
-
-There's currently no typing capability on mobile. I'm working on fixing the bug bear with me.
-
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
